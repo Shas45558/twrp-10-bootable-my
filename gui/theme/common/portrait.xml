@@ -237,7 +237,7 @@
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
 					<action function="set">tw_action2_param=flash_zip2</action>
-					<action function="set">tw_text1=Disable Dm-Verity and ForceEncrypt</action>
+					<action function="set">tw_text1=Disable Dm-Verity and ForceEncrypt.</action>
 					<action function="set">tw_text2=Try to install it?</action>
 					<action function="set">tw_slider_text=Swipe to Confirm</action>
 					<action function="page">confirm_action</action>
@@ -283,7 +283,7 @@
 				<text>System RW</text>
 				<actions>
 					<action function="set">tw_back=addons</action>
-					<action function="set">tw_filename=/twres/addon/magisk.zip</action>
+					<action function="set">tw_filename=/twres/addon/systemrw.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
@@ -390,7 +390,7 @@
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
 					<action function="set">tw_action2_param=flash_zip2</action>
-					<action function="set">tw_text1=Patch your vbmeta..</action>
+					<action function="set">tw_text1=Patch your vbmeta.</action>
 					<action function="set">tw_text2=Try to install it?</action>
 					<action function="set">tw_slider_text=Swipe to Confirm</action>
 					<action function="page">confirm_action</action>
@@ -407,7 +407,7 @@
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
 					<action function="set">tw_action2_param=flash_zip2</action>
-					<action function="set">tw_text1=Before flash MUST Backup product and vendor</action>
+					<action function="set">tw_text1=Before flash MUST Backup product and vendor.</action>
 					<action function="set">tw_text2=After flash reboot to recovery and restore Them.</action>
 					<action function="set">tw_slider_text=Follow Above line Must.</action>
 					<action function="page">confirm_action</action>
@@ -454,8 +454,7 @@
 		</page>
 		
 		<page name="btness">
-			<template name="page"/>
-
+			<template name="page2"/>
 			<text style="text_l">
 				<placement x="%col1_x_header%" y="%row3_header_y%"/>
 				<text>Essential</text>
@@ -470,6 +469,31 @@
 			<console>
 				<placement x="%indent%" y="%row2a_y%" w="%content_width%" h="700"/>
 			</console>
+			<button style="main_button_half_height">
+				<placement x="36" y="1149"/>
+				<text>Flashlight ON</text>
+				<action function="cmd">
+echo 200 > /sys/class/leds/flashlight/brightness
+				</action>
+			</button>
+			
+			<text style="text_m">
+				<placement x="116" y="1350"/>
+				<text>Or press Volup</text>
+			</text>
+			
+			<button style="main_button_half_height">
+				<placement x="557" y="1149"/>
+				<text>Flashlight OFF</text>
+				<action function="cmd">
+echo 0 > /sys/class/leds/flashlight/brightness
+				</action>
+			</button>
+			
+			<text style="text_m">
+				<placement x="637" y="1350"/>
+				<text>Or press Voldown</text>
+			</text>
 			
 			<slidervalue>
 				<condition var1="tw_has_brightnesss_file" var2="1"/>
@@ -507,6 +531,7 @@
 		
 		<page name="main">
 			<template name="page"/>
+			<template name="progress_bar"/>
 
 			<text style="text_l">
 				<placement x="%col1_x_header%" y="%row3_header_y%"/>
@@ -594,7 +619,6 @@ mount -o rw /vendor
 				<text>{@restore_btn=Restore}</text>
 				<actions>
 					<action function="page">restore</action>
-					<action function="refreshsizes"/>
 				</actions>
 			</button>
 
@@ -4848,7 +4872,31 @@ mount -o rw /vendor
 				<image resource="unlock_icon"/>
 				<placement x="%center_x%" y="%row10_y%" placement="4"/>
 			</image>
+			<button style="main_button_half_height">
+				<placement x="36" y="1149"/>
+				<text>Flashlight ON</text>
+				<action function="cmd">
+echo 200 > /sys/class/leds/flashlight/brightness
+				</action>
+			</button>
 			
+			<text style="text_m">
+				<placement x="116" y="1350"/>
+				<text>Or press Volup</text>
+			</text>
+			
+			<button style="main_button_half_height">
+				<placement x="557" y="1149"/>
+				<text>Flashlight OFF</text>
+				<action function="cmd">
+echo 0 > /sys/class/leds/flashlight/brightness
+				</action>
+			</button>
+			
+			<text style="text_m">
+				<placement x="637" y="1350"/>
+				<text>Or press Voldown</text>
+			</text>
 			<slider>
 				<text>{@swipe_to_unlock=Swipe to Unlock}</text>
 				<action function="overlay"/>

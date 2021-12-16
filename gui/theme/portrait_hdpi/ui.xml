@@ -176,7 +176,7 @@
 		<variable name="keyboard_y" value="1149"/>
 		<variable name="keyboard_terminal_y" value="1053"/>
 		<variable name="background_color" value="#000000"/>
-		<variable name="accent_color" value="#777777"/>
+		<variable name="accent_color" value="#121212"/>
 		<variable name="accent_color_semitransparent" value="#77777730"/>
 		<variable name="text_color" value="#EEEEEE"/>
 		<variable name="text_button_color" value="#EEEEEE"/>
@@ -356,7 +356,114 @@ echo 0 > /sys/class/leds/flashlight/brightness
 			</action>
 		</template>
 		
+		<template name="page2">
+			<background color="%background_color%"/>
 
+			<fill color="%accent_color%">
+				<placement x="0" y="0" w="%screen_width%" h="%header_height%"/>
+			</fill>
+
+			<image>
+				<condition var1="tw_busy" var2="1"/>
+				<image resource="logo"/>
+				<placement x="0" y="0"/>
+			</image>
+
+			<button>
+				<condition var1="tw_busy" var2="0"/>
+				<placement x="0" y="0"/>
+				<image resource="logo"/>
+				<action function="key">home</action>
+			</button>
+
+			<fill color="#00000030">
+				<condition var1="tw_simulate_actions" var2="0"/>
+				<placement x="0" y="0" w="%screen_width%" h="%status_height%"/>
+			</fill>
+
+			<fill color="%text_fail_color%">
+				<condition var1="tw_simulate_actions" var2="1"/>
+				<placement x="0" y="0" w="%screen_width%" h="%status_height%"/>
+			</fill>
+
+			<text color="%text_color%">
+				<condition var1="tw_no_cpu_temp" var2="1"/>
+				<font resource="font_m"/>
+				<placement x="%indent%" y="%row1_header_y%"/>
+				<text>%tw_version%</text>
+			</text>
+
+			<text color="%text_color%">
+				<font resource="font_m"/>
+				<placement x="350" y="%row1_header_y%" placement="5"/>
+				<text>%tw_time%</text>
+			</text>
+
+			<text color="%text_color%">
+				<conditions>
+					<condition var1="tw_no_battery_percent" var2="0"/>
+					<condition var1="tw_battery" op="&gt;" var2="0"/>
+					<condition var1="tw_battery" op="&lt;" var2="101"/>
+				</conditions>
+				<font resource="font_m"/>
+				<placement x="%indent_right%" y="%row1_header_y%" placement="1"/>
+				<text>{@battery_pct=Battery: %tw_battery%}</text>
+			</text>
+
+			<fill color="#000000">
+				<condition var1="tw_busy" var2="0"/>
+				<placement x="0" y="%navbar_y%" w="%screen_width%" h="%navbar_height%"/>
+			</fill>
+
+
+			<button>
+				<condition var1="tw_samsung_navbar" op="=" var2="1"/>
+				<placement x="%back_button_x%" y="%navbar_btn_y%" placement="4"/>
+				<image resource="console"/>
+				<condition var1="tw_busy" var2="0"/>
+				<action function="page">btness</action>
+			</button>
+
+			<button>
+				<placement x="%center_x%" y="%navbar_btn_y%" placement="4"/>
+				<image resource="home"/>
+				<condition var1="tw_busy" var2="0"/>
+				<action function="key">home</action>
+			</button>
+
+			<button>
+				<condition var1="tw_samsung_navbar" op="!=" var2="1"/>
+				<placement x="%console_button_x%" y="%navbar_btn_y%" placement="4"/>
+				<image resource="console"/>
+				<condition var1="tw_busy" var2="0"/>
+				<action function="page">btness</action>
+			</button>
+
+			<action>
+				<touch key="power"/>
+				<action function="togglebacklight"/>
+			</action>
+			
+			<action>
+				<touch key="volup"/>
+				<action function="cmd">
+echo 200 > /sys/class/leds/flashlight/brightness
+				</action>
+			</action>
+
+			<action>
+				<touch key="voldown"/>
+				<action function="cmd">
+echo 0 > /sys/class/leds/flashlight/brightness
+				</action>
+			</action>
+			
+			<action>
+				<touch key="power+voldown"/>
+				<action function="screenshot"/>
+			</action>
+		</template>
+		
 
 		<template name="progress_bar">
 			<progressbar>
