@@ -238,13 +238,13 @@
 					<action function="set">tw_action2=flash</action>
 					<action function="set">tw_action2_param=flash_zip2</action>
 					<action function="set">tw_text1=Disable Dm-Verity and ForceEncrypt.</action>
-					<action function="set">tw_text2=Try to install it?</action>
+					<action function="set">tw_text2=Don't flash on a13</action>
 					<action function="set">tw_slider_text=Swipe to Confirm</action>
 					<action function="page">confirm_action</action>
 				</actions>
 			</button>
 			
-			<button style="main_button_half_height">
+			<!--button style="main_button_half_height">
 				<placement x="36" y="819"/>
 				<text>F2fs Patcher</text>
 				<actions>
@@ -259,7 +259,7 @@
 					<action function="set">tw_slider_text=Swipe to Confirm</action>
 					<action function="page">confirm_action</action>
 				</actions>
-			</button>
+			</button-->
 			
 			<button style="main_button_half_height">
 				<placement x="36" y="984"/>
@@ -312,7 +312,7 @@
 				</actions>
 			</button>
 			
-			<button style="main_button_half_height">
+			<!--button style="main_button_half_height">
 				<placement x="557" y="324"/>
 				<text>Magisk Manager</text>
 				<actions>
@@ -327,7 +327,7 @@
 					<action function="set">tw_slider_text=Swipe to Confirm</action>
 					<action function="page">confirm_action</action>
 				</actions>
-			</button>
+			</button-->
 			
 			<button style="main_button_half_height">
 				<placement x="557" y="489"/>
@@ -397,7 +397,7 @@
 				</actions>
 			</button>
 			
-			<button style="main_button_half_height">
+			<!--button style="main_button_half_height">
 				<placement x="557" y="1149"/>
 				<text>SVP Resizer</text>
 				<actions>
@@ -412,7 +412,7 @@
 					<action function="set">tw_slider_text=Follow Above line Must.</action>
 					<action function="page">confirm_action</action>
 				</actions>
-			</button>
+			</button-->
 			
 			<button style="main_button_half_height">
 				<placement x="557" y="1314"/>
@@ -554,17 +554,6 @@ echo 0 > /sys/class/leds/flashlight/brightness
 					<action function="refreshsizes"/>
 					<action function="set">tw_clear_destination=main2</action>
 					<action function="page">clear_vars</action>
-					<action function="cmd">
-umount /system_root
-umount /product
-umount /vendor
-mount -o rw /system_root
-mount -o rw /product
-mount -o rw /vendor
-/bin/blockdev --setrw /dev/block/mapper/system
-/bin/blockdev --setrw /dev/block/mapper/product
-/bin/blockdev --setrw /dev/block/mapper/vendor
-				</action>
 				</actions>
 			</action>
 		</page>
