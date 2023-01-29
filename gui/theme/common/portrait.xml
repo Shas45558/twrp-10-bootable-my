@@ -198,7 +198,7 @@
 				<actions>
 					<action function="set">tw_back=addons</action>
 					<action function="set">addon=1</action>
-					<action function="set">tw_filename=/twres/addon/magisk.zip</action>
+					<action function="set">tw_filename=/addon/magisk.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
@@ -215,7 +215,7 @@
 				<text>Enforcer</text>
 				<actions>
 					<action function="set">tw_back=addons</action>
-					<action function="set">tw_filename=/twres/addon/enforcer.zip</action>
+					<action function="set">tw_filename=/addon/enforcer.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
@@ -232,7 +232,7 @@
 				<text>ForceEncrypt</text>
 				<actions>
 					<action function="set">tw_back=addons</action>
-					<action function="set">tw_filename=/twres/addon/Disable_Dm-Verity_ForceEncrypt.zip</action>
+					<action function="set">tw_filename=/addon/Disable_Dm-Verity_ForceEncrypt.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
@@ -249,7 +249,7 @@
 				<text>F2fs Patcher</text>
 				<actions>
 					<action function="set">tw_back=addons</action>
-					<action function="set">tw_filename=/twres/addon/F2fs-patcher.zip</action>
+					<action function="set">tw_filename=/addon/F2fs-patcher.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
@@ -266,7 +266,7 @@
 				<text>Unlock Logo Remover</text>
 				<actions>
 					<action function="set">tw_back=addons</action>
-					<action function="set">tw_filename=/twres/addon/Unlock-Logo-Remover.zip</action>
+					<action function="set">tw_filename=/addon/Unlock-Logo-Remover.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
@@ -283,7 +283,7 @@
 				<text>System RW</text>
 				<actions>
 					<action function="set">tw_back=addons</action>
-					<action function="set">tw_filename=/twres/addon/systemrw.zip</action>
+					<action function="set">tw_filename=/addon/systemrw.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
@@ -300,7 +300,7 @@
 				<text>Remove Pin/Pass</text>
 				<actions>
 					<action function="set">tw_back=addons</action>
-					<action function="set">tw_filename=/twres/addon/rfp.zip</action>
+					<action function="set">tw_filename=/addon/rfp.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
@@ -317,7 +317,7 @@
 				<text>Magisk Manager</text>
 				<actions>
 					<action function="set">tw_back=addons</action>
-					<action function="set">tw_filename=/twres/addon/mm.zip</action>
+					<action function="set">tw_filename=/addon/mm.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
@@ -334,7 +334,7 @@
 				<text>Permissiver</text>
 				<actions>
 					<action function="set">tw_back=addons</action>
-					<action function="set">tw_filename=/twres/addon/permissiver.zip</action>
+					<action function="set">tw_filename=/addon/permissiver.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
@@ -351,7 +351,7 @@
 				<text>Replace TWRP Fixer</text>
 				<actions>
 					<action function="set">tw_back=addons</action>
-					<action function="set">tw_filename=/twres/addon/disable-replace-twrp.zip</action>
+					<action function="set">tw_filename=/addon/disable-replace-twrp.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
@@ -368,7 +368,7 @@
 				<text>Imei Backup</text>
 				<actions>
 					<action function="set">tw_back=addons</action>
-					<action function="set">tw_filename=/twres/addon/Imei-Backup.zip</action>
+					<action function="set">tw_filename=/addon/Imei-Backup.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
@@ -385,7 +385,7 @@
 				<text>Vbmeta Patcher</text>
 				<actions>
 					<action function="set">tw_back=addons</action>
-					<action function="set">tw_filename=/twres/addon/vbmetapatch.zip</action>
+					<action function="set">tw_filename=/addon/vbmetapatch.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
@@ -402,7 +402,7 @@
 				<text>SVP Resizer</text>
 				<actions>
 					<action function="set">tw_back=addons</action>
-					<action function="set">tw_filename=/twres/addon/spv-resizer.zip</action>
+					<action function="set">tw_filename=/addon/spv-resizer.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
@@ -419,7 +419,7 @@
 				<text>File Manager</text>
 				<actions>
 					<action function="set">tw_back=addons</action>
-					<action function="set">tw_filename=/twres/addon/fm.zip</action>
+					<action function="set">tw_filename=/addon/fm.zip</action>
 					<action function="set">tw_action=queuezip</action>
 					<action function="set">tw_has_action2=1</action>
 					<action function="set">tw_action2=flash</action>
