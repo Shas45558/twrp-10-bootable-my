@@ -565,6 +565,14 @@ echo 0 > /sys/class/leds/flashlight/brightness
 				</actions>
 			</action>
 		</page>
+		<page name="main2">
+			<action>
+				<actions>
+					<action function="set">tw_clear_destination=main3</action>
+					<action function="page">clear_vars</action>
+				</actions>
+			</action>
+		</page>
 		
 		<page name="main3">
 
