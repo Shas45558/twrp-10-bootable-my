@@ -529,7 +529,7 @@ echo 0 > /sys/class/leds/flashlight/brightness
 			</action>
 		</page>
 		
-		<page name="main">
+		<!--page name="main">
 			<template name="page"/>
 			<template name="progress_bar"/>
 
@@ -556,8 +556,8 @@ echo 0 > /sys/class/leds/flashlight/brightness
 					<action function="page">clear_vars</action>
 				</actions>
 			</action>
-		</page>
-		<page name="main2">
+		</page-->
+		<page name="main">
 			<action>
 				<actions>
 					<action function="set">tw_clear_destination=main3</action>
